@@ -1,0 +1,30 @@
+<div class="">
+    <div id="Home" class="tabcontent">
+        <p><app-home></app-home></p>
+        <p>&nbsp;</p>
+    </div>
+
+    <div id="News" class="tabcontent">
+        <h3> <i class="fa fa-home"></i> News</h3>
+        {{Pages}}
+        <p>Some news this fine day!</p>
+    </div>
+
+    <div id="Contact" class="tabcontent">
+        <h3>Contact</h3>
+        {{Pages}}
+        <p>Get in touch, or swing by for a cup of coffee.</p>
+    </div>
+
+    <div id="About" class="tabcontent">
+      <p><app-fiture></app-fiture></p>
+      <p>&nbsp;</p>
+    </div>
+</div>
+
+<div class="navbar">
+    <button class="tablink" [ngStyle]="{'background-color':Pages === 'Home' ? '#303f9f' : '' }" (click)="openPage('Home')" id="defaultOpen"><i class="fa fa-circle-o"></i> <br>   Home</button>
+    <button class="tablink" [ngStyle]="{'background-color':Pages === 'News' ? '#303f9f' : '' }" (click)="openPage('News')"><i class="fa fa-newspaper-o"></i> <br> News</button>
+    <button class="tablink" [ngStyle]="{'background-color':Pages === 'Contact' ? '#303f9f' : '' }" (click)="openPage('Contact')"><i class="fa fa-phone"></i> <br> Contact</button>
+    <button class="tablink" [ngStyle]="{'background-color':Pages === 'About' ? '#303f9f' : '' }" (click)="openPage('About')"><i class="fa fa-th-large"></i> <br> Fiture</button>
+</div>
